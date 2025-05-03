@@ -13,7 +13,6 @@ public class radioButton {
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.findElement(By.cssSelector("input[value=radio1]")).click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.quit();
     }
 }
