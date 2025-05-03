@@ -11,8 +11,13 @@ import java.time.Duration;
 public class getSizeExample {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        // Set the desired dimensions (width, height)
+        Dimension dimension = new Dimension(1024, 768); // Example dimensions
+        driver.manage().window().setSize(dimension);
+
+        /* driver.manage().window().maximize(); */
+
         driver.get("https://www.saucedemo.com/");
         WebElement usrname = driver.findElement(By.id("user-name"));
         Dimension size = usrname.getSize();

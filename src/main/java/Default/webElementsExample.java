@@ -22,7 +22,15 @@ public class webElementsExample {
         System.out.println("Is displayed: " + element.isDisplayed());
         System.out.println("Is enabled: " + element.isEnabled());
         System.out.println("Is selected: " + element.isSelected());
-        System.out.println("Color: " + element.getCssValue("color"));
+        String color = element.getCssValue("color");
+        System.out.println("Color: " + color);
+        // Validate the color (example: checking if it matches a specific RGB value)
+        String expectedColor = "rgba(72, 76, 85, 1)";
+        if (color.equals(expectedColor)) {
+            System.out.println("The color is as expected.");
+        } else {
+            System.out.println("The color is not as expected.");
+        }
         System.out.println("Tag Name: " + element.getTagName());
 
         // Interacting with the element
