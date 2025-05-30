@@ -37,5 +37,6 @@ public class webElementsExample {
         element.click();
         element.sendKeys("Some text");
         element.clear();
+        driver.close();
     }
 }
